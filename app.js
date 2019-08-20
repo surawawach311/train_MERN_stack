@@ -2,6 +2,7 @@ const express = require('express');
 const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
+const config = require('./config/index');
 //Library MongoDB
 const mongoose = require('mongoose');
 // Import route
@@ -12,7 +13,7 @@ const settingRouter = require('./routes/setting');
 const app = express();
 
 //connection mongodb server
-mongoose.connect('mongodb+srv://AdminBoom:3GP7GDy1hm4HuT5E@clusterbb-dvdsf.mongodb.net/backendapi?retryWrites=true&w=majority', {
+mongoose.connect(config.MONGODB_URI, {
     useNewUrlParser: true
 });
 
