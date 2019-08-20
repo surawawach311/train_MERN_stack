@@ -8,7 +8,16 @@ const schema = new mongoose.Schema({
         lgn: { type: Number }
     }
 }, {
-    timestamps:true
+        timestamps: true,
+        toJSON: { virtuals: true },
+        toObject: { virtuals: true }
+    });
+
+//find menu shop _id === Menu shop
+schema.virtual('menus', {
+    ref: 'Menu',
+    localField: '_id',
+    foreignField: 'shop'
 });
 
 const Shop = mongoose.model('Shop', schema);
