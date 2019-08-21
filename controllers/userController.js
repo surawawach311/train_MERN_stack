@@ -1,10 +1,18 @@
 const User = require('../models/user');
+const { validationResult } = require('express-validator')
 
 exports.register = async (req, res, next) => {
     try {
 
         const { name, email, password } = req.body;
 
+        const errorValidation = validationResult(req);
+        if(!errorValidation.isEmpty()){
+            const error = new Error('Please Input require Infomation')
+            error.statusCode = 422;
+            error.validation = errorValidation.array();
+            throw error;
+        }
         //check Duplicate Email
         const existEmail = await User.findOne({ email: email });
         if (existEmail) {
