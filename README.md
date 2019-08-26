@@ -1,7 +1,7 @@
 # train_MERN_stack
 
-## middlewares  
-## Library of this Project  
+## middlewares & Library
+
 ### Bcrypt
 สมัยก่อนนิยมการเข้ารหัสแบบ md5 หรือ sha1 ซึ่งความปลอดภัยในสมัยนี้ใช้ไม่ได้แล้ว เนื่องจากมีโปรแกรมที่สามารถถอดรหัส(Decryption) ได้นั่นเอง
 
@@ -32,5 +32,12 @@ Helmet เป็นแนวทางการปกป้อง HTTP headers �
 7. noSniff sets X-Content-Type-Options to prevent browsers from MIME-sniffing a response away from the declared content-type.
 8. frameguard sets the X-Frame-Options header to provide clickjacking protection.
 9. xssFilter sets X-XSS-Protection to enable the Cross-site scripting (XSS) filter in most recent web browsers.
+
+### jsonwebtoken
+ใช้สำหรับทำ Authentication ของระบบ โดยการเข้ารหัส token
+
+### mangoose
+ใช้เชื่อมต่อกับ mongoDB 
+
 
 
