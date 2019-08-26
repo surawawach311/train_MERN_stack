@@ -18,4 +18,19 @@ CORS จะกำหนดวิธีการที่เว็บบราว
 ### express-rate-limit
 ใช้สำหรับป้องกันโจมตีแบบ DDOS สามารถกำหนด Request ต่อวินาทีได้เพื่อป้องกันการเรียกซ้ำๆจาก IP เดิม
 
+### express-validator 
+ใช้สำหรับตรวจสอบ Input ที่รับเข้ามาว่าเป็นไปตามที่กำหนดหรือไม่ ถ้าไม่ถูกต้องให้แจ้ง Error กลับไปทาง Client
+
+### helmet
+Helmet เป็นแนวทางการปกป้อง HTTP headers ตามที่ Express ได้แนะนำไว้ข้างต้น โดยทางเอกสารของ Express กล่าวไว้ว่า Helmet สามารถครอบคลุมความปลอดภัย ได้ดังนี้
+1.csp sets the Content-Security-Policy header to help prevent cross-site scripting attacks and other cross-site injections.
+2.hidePoweredBy removes the X-Powered-By header.
+3.hpkp Adds Public Key Pinning headers to prevent man-in-the-middle attacks with forged certificates.
+4.hsts sets Strict-Transport-Security header that enforces secure (HTTP over SSL/TLS) connections to the server.
+5.ieNoOpen sets X-Download-Options for IE8+.
+6.noCache sets Cache-Control and Pragma headers to disable client-side caching.
+7.noSniff sets X-Content-Type-Options to prevent browsers from MIME-sniffing a response away from the declared content-type.
+8.frameguard sets the X-Frame-Options header to provide clickjacking protection.
+9.xssFilter sets X-XSS-Protection to enable the Cross-site scripting (XSS) filter in most recent web browsers.
+
 
